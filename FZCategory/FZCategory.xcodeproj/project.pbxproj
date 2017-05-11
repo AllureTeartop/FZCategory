@@ -230,8 +230,7 @@
 				TargetAttributes = {
 					2EDEB7A91EC409DF0001AF91 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = XR8WRG3HAN;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					2EDEB7C21EC409E00001AF91 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -451,11 +450,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XR8WRG3HAN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FZCategory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AllureTeartop.Florence.FZCategory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weixin.sss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -463,11 +463,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XR8WRG3HAN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FZCategory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AllureTeartop.Florence.FZCategory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weixin.sss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
