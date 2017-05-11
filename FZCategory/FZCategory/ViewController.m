@@ -18,11 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSString *sss = @"370883211509104419";
-    BOOL is =  sss.fz_isIdentityCard;
     
-    
-    NSLog(@"%@",is);
     
 }
 

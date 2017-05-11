@@ -10,7 +10,7 @@
 #import <CommonCrypto/CommonDigest.h>
 @implementation NSString (FZ)
 #pragma mark ------ 判断字符串是否为空 --------
--(BOOL)fz_isEmpty{
+-(BOOL)isEmpty{
     if (self == nil || self == NULL) {
         return YES;
     }
@@ -23,12 +23,12 @@
     return NO;
 }
 #pragma mark ----- 字符串转NSURL ----------
-- (NSURL *)fz_url{
+- (NSURL *)url{
     return [NSURL URLWithString:self];
 }
 
 #pragma mark ------ MD5加密 --------
--(NSString*)fz_md532bitLower{
+-(NSString*)md532bitLower{
     const char *cStr = [self UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];
     CC_MD5(cStr, (int)strlen(cStr), result);
@@ -40,7 +40,7 @@
              ] lowercaseString];
 
 }
--(NSString*)fz_md532bitUper{
+-(NSString*)md532bitUper{
     const char *cStr = [self UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];
     CC_MD5(cStr, (int)strlen(cStr), result);
@@ -52,14 +52,14 @@
              ] uppercaseString];
 }
 #pragma mark ------ base64编码 -------
--(NSString *)fz_base64EncodeString{
+-(NSString *)base64EncodeString{
     //1.先转换为二进制数据
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     //2.对二进制数据进行base64编码,完成之后返回字符串
     return [data base64EncodedStringWithOptions:0];
 }
 
--(NSString *)fz_base64DecodeString{
+-(NSString *)base64DecodeString{
     //注意:该字符串是base64编码后的字符串
     //1.转换为二进制数据(完成了解码的过程)
     NSData *data = [[NSData alloc]initWithBase64EncodedString:self options:0];
@@ -67,7 +67,7 @@
     return [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
 }
 #pragma mark ----- url编码 --------
--(NSString *)fz_urlEncodeString{
+-(NSString *)urlEncodeString{
     NSString *encodedString = (NSString *)
     CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                               (CFStringRef)self,
@@ -77,7 +77,7 @@
     return encodedString;
 }
 
--(NSString *)fz_urlDecodeString{
+-(NSString *)urlDecodeString{
     NSString *decodedString  = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
                                                                                                                      (__bridge CFStringRef)self,
                                                                                                                      CFSTR(""),
@@ -86,11 +86,11 @@
 
 }
 #pragma mark ------- 字符串转NSData --------
--(NSData *)fz_dataValue{
+-(NSData *)dataValue{
     return [self dataUsingEncoding:NSUTF8StringEncoding];
 }
 #pragma mark ------- 字符串转json -----------
--(NSString *)fz_JSONString{
+-(NSString *)JSONString{
     
     NSMutableString *s = [NSMutableString stringWithString:self];
     
@@ -111,7 +111,7 @@
     return [NSString stringWithString:s];
 }
 #pragma mark ------- 字符串转时间（多久之前）--------
--(NSString *)fz_currentTimeString{
+-(NSString *)currentTimeString{
     //把字符串转为NSdate
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
@@ -148,15 +148,15 @@
     return  result;
 }
 #pragma mark ----- 判断是否是中文 -------
--(BOOL)fz_isChinese{
+-(BOOL)isChinese{
     NSString *match = @"(^[\u4e00-\u9fa5]+$)";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
     return [predicate evaluateWithObject:self];
 }
 #pragma mark ------- 去除字符串所有的空格 --------
-- (NSString *)fz_removeSpace{
+- (NSString *)removeSpace{
     
-    if (self.fz_isEmpty) {
+    if (self.isEmpty) {
       return @"";
     }else{
     
@@ -164,7 +164,7 @@
     }
 }
 #pragma mark ----- 大写第一个字符 -------
-- (NSString *)fz_firstCharUpper{
+- (NSString *)firstCharUpper{
     if (self.length == 0) return self;
     NSMutableString *string = [NSMutableString string];
     [string appendString:[NSString stringWithFormat:@"%c", [self characterAtIndex:0]].uppercaseString];
@@ -172,7 +172,7 @@
     return string;
 }
 #pragma mark ----- 小写第一个字符 -------
-- (NSString *)fz_firstCharLower
+- (NSString *)firstCharLower
 {
     if (self.length == 0) return self;
     NSMutableString *string = [NSMutableString string];
@@ -182,24 +182,24 @@
 }
 
 #pragma mark ----- 判断是否是手机号 --------
-- (BOOL)fz_isMobile
+- (BOOL)isMobile
 {
     return [self validWithRegex:@"^(0|86|17951)?(13[0-9]|15[0-9]|17[0678]|18[0-9]|14[57])[0-9]{8}$"];
 }
 #pragma mark ----- 判断是否是身份证 --------
-- (BOOL)fz_isIdentityCard{
+- (BOOL)isIdentityCard{
     return [self chk18PaperId:[self uppercaseString]];
 }
 #pragma mark ----- 判断是否是URL --------
-- (BOOL)fz_isURL{
+- (BOOL)isURL{
     return [self validWithRegex:@"^((http)|(https))+:[^\\s]+\\.[^\\s]*$"];
 }
 #pragma mark ----- 判断是否是邮箱 --------
-- (BOOL)fz_isEMail{
+- (BOOL)isEMail{
     return [self validWithRegex:@"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"];
 }
 #pragma mark ----- 判断是否是IP --------
-- (BOOL)fz_isIPAddress{
+- (BOOL)isIPAddress{
     if ([self validWithRegex:@"^(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})$"]) {
         
         NSArray *components = [self componentsSeparatedByString:@"."];

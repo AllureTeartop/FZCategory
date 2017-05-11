@@ -10,8 +10,10 @@
 #define FZCategory_h
 
 #import "NSString+FZ.h"
-
-
+#import "UIImage+FZ.h"
+#import "UIView+FZ.h"
+#import "UIViewController+FZ.h"
+#import "UIColor+FZ.h"
 
 
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EAAA2E51EC464B800308C8C /* UIImage+FZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA2E41EC464B800308C8C /* UIImage+FZ.m */; };
+		2EAAA2EB1EC4657500308C8C /* UIColor+FZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA2EA1EC4657500308C8C /* UIColor+FZ.m */; };
+		2EAAA2EE1EC4658900308C8C /* UIView+FZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA2ED1EC4658900308C8C /* UIView+FZ.m */; };
+		2EAAA2F11EC4659800308C8C /* UIViewController+FZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAA2F01EC4659800308C8C /* UIViewController+FZ.m */; };
 		2EDEB7AF1EC409DF0001AF91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEB7AE1EC409DF0001AF91 /* main.m */; };
 		2EDEB7B21EC409DF0001AF91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEB7B11EC409DF0001AF91 /* AppDelegate.m */; };
 		2EDEB7B51EC409DF0001AF91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEB7B41EC409DF0001AF91 /* ViewController.m */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EAAA2E31EC464B800308C8C /* UIImage+FZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FZ.h"; sourceTree = "<group>"; };
+		2EAAA2E41EC464B800308C8C /* UIImage+FZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FZ.m"; sourceTree = "<group>"; };
+		2EAAA2E91EC4657500308C8C /* UIColor+FZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FZ.h"; sourceTree = "<group>"; };
+		2EAAA2EA1EC4657500308C8C /* UIColor+FZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FZ.m"; sourceTree = "<group>"; };
+		2EAAA2EC1EC4658900308C8C /* UIView+FZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FZ.h"; sourceTree = "<group>"; };
+		2EAAA2ED1EC4658900308C8C /* UIView+FZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FZ.m"; sourceTree = "<group>"; };
+		2EAAA2EF1EC4659800308C8C /* UIViewController+FZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FZ.h"; sourceTree = "<group>"; };
+		2EAAA2F01EC4659800308C8C /* UIViewController+FZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FZ.m"; sourceTree = "<group>"; };
 		2EDEB7AA1EC409DF0001AF91 /* FZCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FZCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDEB7AE1EC409DF0001AF91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2EDEB7B01EC409DF0001AF91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +94,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EAAA2E21EC4647E00308C8C /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				2EAAA2E31EC464B800308C8C /* UIImage+FZ.h */,
+				2EAAA2E41EC464B800308C8C /* UIImage+FZ.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		2EAAA2E61EC4656300308C8C /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				2EAAA2E91EC4657500308C8C /* UIColor+FZ.h */,
+				2EAAA2EA1EC4657500308C8C /* UIColor+FZ.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		2EAAA2E71EC4656300308C8C /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				2EAAA2EC1EC4658900308C8C /* UIView+FZ.h */,
+				2EAAA2ED1EC4658900308C8C /* UIView+FZ.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		2EAAA2E81EC4656300308C8C /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2EAAA2EF1EC4659800308C8C /* UIViewController+FZ.h */,
+				2EAAA2F01EC4659800308C8C /* UIViewController+FZ.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		2EDEB7A11EC409DF0001AF91 = {
 			isa = PBXGroup;
 			children = (
@@ -148,8 +196,12 @@
 		2EDEB7E01EC40B350001AF91 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				2EDEB7E81EC40CB10001AF91 /* FZCategory.h */,
+				2EAAA2E61EC4656300308C8C /* UIColor */,
+				2EAAA2E71EC4656300308C8C /* UIView */,
+				2EAAA2E81EC4656300308C8C /* UIViewController */,
 				2EDEB7E11EC40B350001AF91 /* NSString */,
+				2EAAA2E21EC4647E00308C8C /* UIImage */,
+				2EDEB7E81EC40CB10001AF91 /* FZCategory.h */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -298,7 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EAAA2F11EC4659800308C8C /* UIViewController+FZ.m in Sources */,
 				2EDEB7B51EC409DF0001AF91 /* ViewController.m in Sources */,
+				2EAAA2EB1EC4657500308C8C /* UIColor+FZ.m in Sources */,
+				2EAAA2EE1EC4658900308C8C /* UIView+FZ.m in Sources */,
+				2EAAA2E51EC464B800308C8C /* UIImage+FZ.m in Sources */,
 				2EDEB7B21EC409DF0001AF91 /* AppDelegate.m in Sources */,
 				2EDEB7AF1EC409DF0001AF91 /* main.m in Sources */,
 				2EDEB7E71EC40C510001AF91 /* NSString+FZ.m in Sources */,
