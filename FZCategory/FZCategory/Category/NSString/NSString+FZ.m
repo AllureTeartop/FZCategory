@@ -10,7 +10,8 @@
 
 @implementation NSString (FZ)
 
-
-
+- (NSURL *)url{
+    return [NSURL URLWithString:self];
+}
 
 @end

@@ -10,7 +10,12 @@
 
 @interface NSString (FZ)
 
+/**
+ 转换为NSURL
 
+ @return NSURL对象
+ */
+- (NSURL *)url;
 
 
 
