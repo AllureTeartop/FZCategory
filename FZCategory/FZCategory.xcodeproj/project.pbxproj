@@ -15,6 +15,7 @@
 		2EDEB7BD1EC409E00001AF91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDEB7BB1EC409E00001AF91 /* LaunchScreen.storyboard */; };
 		2EDEB7C81EC409E00001AF91 /* FZCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEB7C71EC409E00001AF91 /* FZCategoryTests.m */; };
 		2EDEB7D31EC409E00001AF91 /* FZCategoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEB7D21EC409E00001AF91 /* FZCategoryUITests.m */; };
+		2EDEB7E71EC40C510001AF91 /* NSString+FZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEB7E61EC40C510001AF91 /* NSString+FZ.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		2EDEB7CE1EC409E00001AF91 /* FZCategoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FZCategoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDEB7D21EC409E00001AF91 /* FZCategoryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZCategoryUITests.m; sourceTree = "<group>"; };
 		2EDEB7D41EC409E00001AF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EDEB7E51EC40C510001AF91 /* NSString+FZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FZ.h"; sourceTree = "<group>"; };
+		2EDEB7E61EC40C510001AF91 /* NSString+FZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FZ.m"; sourceTree = "<group>"; };
+		2EDEB7E81EC40CB10001AF91 /* FZCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZCategory.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		2EDEB7AC1EC409DF0001AF91 /* FZCategory */ = {
 			isa = PBXGroup;
 			children = (
+				2EDEB7E01EC40B350001AF91 /* Category */,
 				2EDEB7B01EC409DF0001AF91 /* AppDelegate.h */,
 				2EDEB7B11EC409DF0001AF91 /* AppDelegate.m */,
 				2EDEB7B31EC409DF0001AF91 /* ViewController.h */,
@@ -138,6 +143,24 @@
 				2EDEB7D41EC409E00001AF91 /* Info.plist */,
 			);
 			path = FZCategoryUITests;
+			sourceTree = "<group>";
+		};
+		2EDEB7E01EC40B350001AF91 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2EDEB7E81EC40CB10001AF91 /* FZCategory.h */,
+				2EDEB7E11EC40B350001AF91 /* NSString */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		2EDEB7E11EC40B350001AF91 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				2EDEB7E51EC40C510001AF91 /* NSString+FZ.h */,
+				2EDEB7E61EC40C510001AF91 /* NSString+FZ.m */,
+			);
+			path = NSString;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +302,7 @@
 				2EDEB7B51EC409DF0001AF91 /* ViewController.m in Sources */,
 				2EDEB7B21EC409DF0001AF91 /* AppDelegate.m in Sources */,
 				2EDEB7AF1EC409DF0001AF91 /* main.m in Sources */,
+				2EDEB7E71EC40C510001AF91 /* NSString+FZ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +540,7 @@
 				2EDEB7D91EC409E00001AF91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EDEB7DA1EC409E00001AF91 /* Build configuration list for PBXNativeTarget "FZCategoryTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +549,7 @@
 				2EDEB7DC1EC409E00001AF91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EDEB7DD1EC409E00001AF91 /* Build configuration list for PBXNativeTarget "FZCategoryUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +558,7 @@
 				2EDEB7DF1EC409E00001AF91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
